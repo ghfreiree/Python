@@ -5,31 +5,31 @@ Autor: Gustavo Ganaha Freire (@ghfreiree)
 
 credito = float(input('Créditos restantes: R$'))
 compra = float(input("Valor do produto: R$"))
-total = 0
-total+=compra
-add = input(f'Deseja adicionar mais produtos ao carrinho (R${total:.2f})? s para sim e n para finalizar a compra: ')
+totalCarrinho = 0
+totalCarrinho+=compra
+adicionar = input(f'Deseja adicionar mais produtos ao carrinho (R${totalCarrinho:.2f})? Sim para adicionar mais itens ou não para finalizar a compra: ')
 
-if add == 'n' and credito >= total:
-    print(f'Pagamento realizado, obrigado pela compra! (Créditos restantes: R${(credito - total):.2f})')
-elif total < 0:
+if adicionar.upper() == 'NÃO' and credito >= totalCarrinho:
+    print(f'Pagamento realizado, obrigado pela compra! (Créditos restantes: R${(credito - totalCarrinho):.2f})')
+elif totalCarrinho < 0:
     print('Valor inválido')
-elif credito == total:
+elif credito == totalCarrinho:
     print('Créditos Zerados. Obrigado pela compra!')
 elif credito == 0:
     print('Créditos Zerados.')
-elif credito < total:
+elif credito < totalCarrinho:
     print('Créditos insuficientes. Cartão Bloqueado.')
-elif credito > 0 and add =='s':
-    while add == 's' and credito > total:
+elif credito > 0 and adicionar.upper() =='SIM':
+    while adicionar.upper() == 'SIM' and credito > totalCarrinho:
         compra = float(input("Valor do produto: R$"))
-        total+=compra
-        add2 = input(f'Deseja adicionar mais produtos ao carrinho (R${total:.2f})? s para sim e n finalizar a compra: ')
-        if add2 == 'n':
-            print(f'Pagamento realizado, obrigado pela compra! (Créditos restantes: R${(credito - total):.2f})')
+        totalCarrinho+=compra
+        adicionar2 = input(f'Deseja adicionar mais produtos ao carrinho (R${totalCarrinho:.2f})? Sim para adicionar mais itens ou não para finalizar a compra: ')
+        if adicionar2.upper() == 'NÃO' and credito >= totalCarrinho:
+            print(f'Pagamento realizado, obrigado pela compra! (Créditos restantes: R${(credito - totalCarrinho):.2f})')
             break
-        elif credito == 0:
-            print('Créditos Zerados. Obrigado pela compra!')
+        elif (credito - totalCarrinho) == 0:
+            print('Créditos Zerados.')
             break
-        elif credito < 0:
+        elif (credito - totalCarrinho) < 0:
             print('Créditos insuficientes. Cartão Bloqueado.')
             break

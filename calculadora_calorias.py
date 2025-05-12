@@ -8,16 +8,16 @@ resposta = ''
 calorias = []
 
 while resposta.upper() != 'NÃO':
-    caloria = int(input('Quantas calorias você consumiu nessa refeição? '))
-    calorias.append(caloria)
+    caloria_refeicao = int(input('Quantas calorias você consumiu nessa refeição? '))
+    calorias.append(caloria_refeicao)
     resposta = input('Você teve mais uma refeição? ')
 
 print(f'Você consumiu {calorias} calorias')
 
 total = 0
 
-for caloria in calorias:
-    total += caloria
+for caloria_refeicao in calorias:
+    total += caloria_refeicao
 print(f'Total de calorias consumidas: {total}')
 media = total/len(calorias)
 print(f'Média de calorias consumidas por refeição: {media}')

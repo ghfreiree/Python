@@ -1,5 +1,5 @@
 ''' 
-Sistema que lê o modelo e o consumo de 5 carros, realiza cálculos a partir dos dados informados e gera um relatório geral utilizando as propriedades da lista.
+Sistema que lê o modelo e o consumo de 5 carros, realiza cálculos a partir dos dados informados e gera um relatório geral exibindo o carro de menor utilizando as propriedades da lista.
 Autor: Gustavo Ganaha Freire (@ghfreiree)
 '''
 
@@ -27,12 +27,13 @@ if validar == 'ok':
         y += 1
     print('\nRelatório Final')
     j = 1
-    
-    # O relatorio será impresso em formato de tabela com os respectivos campos:
-    # Modelo do carro, km/L do carro, consumo em litros para 1000 km e custo para 1000 km (considerando a gasolina com preço de R$6.98 reais por litro)
     for z in range (0, 10, 2):
         print(f'{j} - {relatorio[z]}           - {relatorio[z+1]} -   {(1000/(relatorio[z+1])):.2f} - {((1000/(relatorio[z+1]))*6.89):.2f}')
         j+=1
+
+'''O relatorio será impresso em formato de tabela com os respectivos campos:
+Modelo do carro, km/L do carro, consumo em litros para 1000 km e custo para 1000 km (considerando a gasolina com preço de R$6.98 reais por litro)
+'''
 
 valores = [relatorio[1], relatorio[3], relatorio[5], relatorio[7], relatorio[9]]
 
