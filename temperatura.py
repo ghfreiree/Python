@@ -1,3 +1,8 @@
+'''
+Sistema que converte temperatura entre Celsius, Fahrenheit e Kelvin
+Autor: Gustavo Ganaha Freire (@ghfreiree)
+'''
+
 temp1 = input ('Unidade de medida a ser convertida (C, F ou K): ')
 
 temp2 = input('Converter essa unidade de medida para: ')

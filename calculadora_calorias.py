@@ -1,3 +1,8 @@
+''' 
+Cálculo de calorias consumidas em refeições
+Este sistema exibe o total de calorias consumidas em várias refeições e a média de calorias por refeição utilizando listas
+Autor: Gustavo Ganaha Freire (@ghfreiree)
+'''
 
 resposta = ''
 calorias = []

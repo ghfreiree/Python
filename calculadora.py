@@ -1,10 +1,6 @@
 '''
-Escreva um programa em Python que simule uma calculadora simples, contendo as quatro operações básicas (+, -, *, / - acrescente mais uma operação).
-
-O programa deve ter:
--Menu de operações
--Realizar o calculo escolhido (dois números)
-- Apresentaar o resultado
+Programa que lê dois números e realiza operações matemáticas com eles.
+Autor: Gustavo Ganaha Freire (@ghfreiree)
 '''
 
 escolha = input('Qual operação você deseja realizar? (soma, sub, mult, div ou pot): ')
